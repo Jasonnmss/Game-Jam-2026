@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cpiecoyeunhsa"]
+
+[ext_resource type="Texture2D" uid="uid://tlxn10oeehjk" path="res://Background_PH.png" id="1_qxhem"]
+
+[node name="backround" type="Node2D" unique_id=876866137]
+texture_filter = 1
+
+[node name="tets" type="Parallax2D" parent="." unique_id=1008366727]
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="tets" unique_id=714937345]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_qxhem")
+centered = false
