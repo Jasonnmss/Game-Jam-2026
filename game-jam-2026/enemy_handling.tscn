@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dr4gc6ajlmh41"]
+
+[ext_resource type="Script" uid="uid://xkp6iuey0ylt" path="res://enemy_handling.gd" id="1_v7ns6"]
+[ext_resource type="PackedScene" uid="uid://c7uooy082r8k7" path="res://enemyBCell.tscn" id="2_u8hg7"]
+[ext_resource type="PackedScene" uid="uid://cnmrsu0mqdxu5" path="res://enemyTCell.tscn" id="3_y0xb0"]
+
+[node name="EnemyHandling" type="Node2D" unique_id=1565824335]
+script = ExtResource("1_v7ns6")
+
+[node name="Basic B" parent="." unique_id=467065630 instance=ExtResource("2_u8hg7")]
+
+[node name="T Cell" parent="." unique_id=1709764123 instance=ExtResource("3_y0xb0")]
+
+[connection signal="died" from="Basic B" to="." method="_on_basic_b_died"]
+[connection signal="died" from="T Cell" to="." method="_on_basic_b_died"]

@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bop0ccqkosru8"]
+
+[ext_resource type="Texture2D" uid="uid://syybmv0l3ssl" path="res://Assets/Boss_Cell.png" id="2_6xxrv"]
+
+[sub_resource type="GDScript" id="GDScript_0bnu1"]
+script/source = "extends CharacterBody2D
+class_name BossCell
+
+var Bullet = preload(\"res://enemy_bullet.tscn\")
+var canshoot = true
+signal died
+#var player = null
+
+@export var health = 3
+
+@export var speed = 20
+@export var accelerate = 50
+
+var markers = [$Marker2D,$Marker2D2,$Marker2D3,$Marker2D4,$Marker2D5,$Marker2D6,$Marker2D7,$Marker2D8,$Marker2D9,$Marker2D10,$Marker2D11,$Marker2D12,]
+@onready var spawnpos = []
+
+#func _on_Detection_body_entered(body):
+#if body.is_in_group(\"Player\"):
+#player = body
+
+func _ready() -> void:
+	markers = [$Marker2D,$Marker2D2,$Marker2D3,$Marker2D4,$Marker2D5,$Marker2D6,$Marker2D7,$Marker2D8,$Marker2D9,$Marker2D10,$Marker2D11,$Marker2D12,]
+	for m in markers:
+		if m.position.x > 600:
+			spawnpos.append(m)
+	visible = false
+
+func _physics_process(delta: float) -> void:
+	speed += delta * accelerate
+	velocity = Vector2.LEFT * speed
+	rotation += 1
+	spawnpos = []
+	for m in markers:
+		if m.position.x < -220:
+			spawnpos.append(m)
+
+func _on_timer_timeout():
+	canshoot = true
+	shoot()
+#if player != null:
+#shoot()
+
+func shoot():
+	if canshoot:
+		for i in spawnpos:
+			var bullet = Bullet.instantiate()
+			get_parent().call_deferred(\"add_child\", bullet)
+			bullet.ready.connect(func(): bullet.global_position = spawnpos[i].global_position)
+		$Timer.start()
+		canshoot = false
+
+func damage():
+	health -= 1
+	if health <= 0:
+		die()
+
+func die():
+	died.emit()
+	print(\"signal\")
+	queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skx2t"]
+radius = 292.06165
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=309925318]
+script = SubResource("GDScript_0bnu1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1919789633]
+position = Vector2(802, 301.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_6xxrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=534238640]
+position = Vector2(802, 301)
+shape = SubResource("CircleShape2D_skx2t")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=73486277]
+position = Vector2(800, -18)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1797810606]
+position = Vector2(618, 15)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=947875957]
+position = Vector2(510, 136)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=206537460]
+position = Vector2(471, 306)
+
+[node name="Marker2D5" type="Marker2D" parent="." unique_id=459416723]
+position = Vector2(511, 456)
+
+[node name="Marker2D6" type="Marker2D" parent="." unique_id=1055269426]
+position = Vector2(617, 568)
+
+[node name="Marker2D7" type="Marker2D" parent="." unique_id=603139990]
+position = Vector2(798, 622)
+
+[node name="Marker2D8" type="Marker2D" parent="." unique_id=334031489]
+position = Vector2(977, 25)
+
+[node name="Marker2D9" type="Marker2D" parent="." unique_id=83215913]
+position = Vector2(1095, 139)
+
+[node name="Marker2D10" type="Marker2D" parent="." unique_id=2133880609]
+position = Vector2(1132, 300)
+
+[node name="Marker2D11" type="Marker2D" parent="." unique_id=438517144]
+position = Vector2(1088, 448)
+
+[node name="Marker2D12" type="Marker2D" parent="." unique_id=205747680]
+position = Vector2(976, 566)

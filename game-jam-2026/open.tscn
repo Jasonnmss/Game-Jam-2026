@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c8kukoe4or4gq"]
+
+[ext_resource type="PackedScene" uid="uid://bjuy3ntr8li8s" path="res://start.tscn" id="1_fuu8b"]
+[ext_resource type="PackedScene" uid="uid://cpiecoyeunhsa" path="res://backround_final.tscn" id="2_iykov"]
+
+[node name="open" type="Node" unique_id=1842247864]
+
+[node name="start" parent="." unique_id=408493193 instance=ExtResource("1_fuu8b")]
+
+[node name="backround" parent="." unique_id=876866137 instance=ExtResource("2_iykov")]

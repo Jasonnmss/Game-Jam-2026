@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crbhdcvbnfqpb" path="res://Assets/Particle/ExpParticle_0002.png" id="4_k2ylp"]
 [ext_resource type="Texture2D" uid="uid://1ri3p6hcr576" path="res://Assets/Particle/ExpParticle_0003.png" id="5_c3u1f"]
 [ext_resource type="Texture2D" uid="uid://3d8xou0n67oj" path="res://Assets/Particle/0.png" id="6_wpdg3"]
+[ext_resource type="AudioStream" uid="uid://cuakor2b873ee" path="res://Assets/Audio/Boss hit 1.wav" id="7_01d12"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a0crg"]
 animations = [{
@@ -38,3 +39,6 @@ sprite_frames = SubResource("SpriteFrames_a0crg")
 frame = 4
 frame_progress = 1.0
 speed_scale = 3.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=434047008]
+stream = ExtResource("7_01d12")

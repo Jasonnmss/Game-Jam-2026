@@ -4,6 +4,8 @@ var Bullet = preload("res://enemy_bullet.tscn")
 var canshoot = true
 #var player = null
 
+signal died
+
 @export var speed = 50
 @export var accelerate = 50
 
@@ -49,6 +51,5 @@ func damage():
 		die()
 		
 func die():
-	var play = $Sprite2D
-	play.play("death")
+	died.emit()
 	queue_free()
