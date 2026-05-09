@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://8fwm4adxppyu"]
+
+[ext_resource type="PackedScene" uid="uid://dw0w8luytjaka" path="res://dna.tscn" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://bxkw4yuxmisx8" path="res://wall.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bjrdalekpx3gh" path="res://player.tscn" id="3_036b0"]
+
+[node name="world" type="Node2D" unique_id=1821206742]
+
+[node name="DNA" parent="." unique_id=1618206276 instance=ExtResource("1_aqk2v")]
+position = Vector2(659, 645)
+
+[node name="wall" parent="." unique_id=1695307919 instance=ExtResource("1_tlwt5")]
+position = Vector2(328, 585)
+
+[node name="wall2" parent="." unique_id=1466190588 instance=ExtResource("1_tlwt5")]
+position = Vector2(365, 9)
+
+[node name="Player" parent="." unique_id=1716914451 instance=ExtResource("3_036b0")]
+position = Vector2(125, 300)
