@@ -10,10 +10,10 @@
 position = Vector2(659, 645)
 
 [node name="wall" parent="." unique_id=1695307919 instance=ExtResource("1_tlwt5")]
-position = Vector2(318, 552)
+position = Vector2(328, 585)
 
 [node name="wall2" parent="." unique_id=1466190588 instance=ExtResource("1_tlwt5")]
-position = Vector2(318, 29)
+position = Vector2(365, 9)
 
 [node name="Player" parent="." unique_id=1716914451 instance=ExtResource("3_036b0")]
 position = Vector2(125, 300)
