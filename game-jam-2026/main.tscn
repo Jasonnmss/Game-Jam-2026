@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c7uooy082r8k7" path="res://enemy_1.tscn" id="6_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cbn60qwihjsv0" path="res://wall_ui.tscn" id="7_w48qg"]
 [ext_resource type="PackedScene" uid="uid://c07msqvi8753k" path="res://healthbar.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://djygw7qcv3ffr" path="res://invis_wall.tscn" id="9_kek77"]
 
 [node name="main" type="Node" unique_id=944928744]
 
@@ -42,3 +43,5 @@ position = Vector2(1286, 100)
 
 [node name="healthbar" parent="." unique_id=1673912980 instance=ExtResource("8_5vw27")]
 z_index = 4
+
+[node name="invis_wall" parent="." unique_id=1093050372 instance=ExtResource("9_kek77")]
