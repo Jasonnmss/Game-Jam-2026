@@ -165,7 +165,7 @@ animations = [{
 
 [node name="Player" type="Node2D" unique_id=1716914451]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1606262035]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1606262035 groups=["player"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_onrkg")

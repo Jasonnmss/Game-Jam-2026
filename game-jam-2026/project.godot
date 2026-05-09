@@ -28,6 +28,7 @@ project/assembly_name="Game Jam 2026"
 [global_group]
 
 bullet=""
+player=""
 
 [input]
 
