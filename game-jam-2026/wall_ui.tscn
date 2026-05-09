@@ -9,7 +9,7 @@ texture_filter = 1
 z_index = -1
 repeat_size = Vector2(1600, 0)
 autoscroll = Vector2(-100, 0)
-repeat_times = 2
+repeat_times = 3
 ignore_camera_scroll = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1844755174]

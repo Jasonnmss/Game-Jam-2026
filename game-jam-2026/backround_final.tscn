@@ -11,7 +11,7 @@ texture_filter = 1
 [node name="back" type="Parallax2D" parent="." unique_id=1602630614]
 repeat_size = Vector2(1600, 0)
 autoscroll = Vector2(-25, 0)
-repeat_times = 2
+repeat_times = 3
 ignore_camera_scroll = true
 
 [node name="back" type="Sprite2D" parent="back" unique_id=789080230]
@@ -22,7 +22,7 @@ centered = false
 [node name="rb2" type="Parallax2D" parent="." unique_id=351879306]
 repeat_size = Vector2(1600, 0)
 autoscroll = Vector2(-50, 0)
-repeat_times = 2
+repeat_times = 3
 ignore_camera_scroll = true
 
 [node name="rb2" type="Sprite2D" parent="rb2" unique_id=179437164]
