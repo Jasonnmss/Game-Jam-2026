@@ -15,6 +15,12 @@ run/main_scene="uid://c7uooy082r8k7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/size/mode=3
+
 [dotnet]
 
 project/assembly_name="Game Jam 2026"
