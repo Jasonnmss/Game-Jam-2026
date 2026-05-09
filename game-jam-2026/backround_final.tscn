@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cpiecoyeunhsa"]
+
+[ext_resource type="Texture2D" uid="uid://ciit4sigs22o3" path="res://Assets/Env_CellsBack.png" id="2_fr8ui"]
+[ext_resource type="Texture2D" uid="uid://cwj4o7ghd1mat" path="res://Assets/Env_Back.png" id="2_nchl1"]
+[ext_resource type="Texture2D" uid="uid://dpsskecnm8mdp" path="res://Assets/Env_CellsFront.png" id="3_5oqh2"]
+
+[node name="backround" type="Node2D" unique_id=876866137]
+z_index = -1
+texture_filter = 1
+
+[node name="back" type="Parallax2D" parent="." unique_id=1602630614]
+repeat_size = Vector2(1600, 0)
+autoscroll = Vector2(-25, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="back" type="Sprite2D" parent="back" unique_id=789080230]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_nchl1")
+centered = false
+
+[node name="rb2" type="Parallax2D" parent="." unique_id=351879306]
+repeat_size = Vector2(1600, 0)
+autoscroll = Vector2(-50, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="rb2" type="Sprite2D" parent="rb2" unique_id=179437164]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_fr8ui")
+centered = false
+
+[node name="rb1" type="Parallax2D" parent="." unique_id=1148501913]
+repeat_size = Vector2(1600, 0)
+autoscroll = Vector2(-75, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="rb1" type="Sprite2D" parent="rb1" unique_id=138673859]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_5oqh2")
+centered = false
