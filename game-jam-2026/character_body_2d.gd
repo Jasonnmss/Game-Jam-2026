@@ -4,10 +4,10 @@ var Bullet = preload("res://enemy_bullet.tscn")
 var canshoot = true
 #var player = null
 
-@export var health = 3
-
 @export var speed = 50
 @export var accelerate = 50
+
+@export var health = 3
 
 @onready var spawnpos = $Marker2D
 
