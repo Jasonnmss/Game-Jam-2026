@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://lyhev5538a75"]
+
+[ext_resource type="Texture2D" uid="uid://sd2jerk30h7f" path="res://Assets/Placeholders/Antibody_PH.png" id="1_1xapl"]
+
+[sub_resource type="GDScript" id="GDScript_1xapl"]
+script/source = "extends Area2D
+
+var speed = 400
+
+@export var life_time = 2
+@export var life_spawn  = 0
+
+
+func _physics_process(delta: float) -> void:
+	position.x -= delta * speed
+
+	life_spawn += delta
+	if life_spawn > life_time:
+		queue_free()
+		
+func _on_body_entered(body):
+	if body.has_method(\"damage\"):                
+		body.damage()
+		queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1xapl"]
+radius = 30.0
+
+[node name="Node2D" type="Node2D" unique_id=253946175]
+
+[node name="Bullet enemy" type="Area2D" parent="." unique_id=1063991251]
+script = SubResource("GDScript_1xapl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bullet enemy" unique_id=1178844523]
+rotation = -3.1415925
+texture = ExtResource("1_1xapl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet enemy" unique_id=2080800950]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_1xapl")

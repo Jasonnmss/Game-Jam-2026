@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cusmrx77753jv"
-path="res://.godot/imported/B Cell_PH.png-0c37019d3e4e2475a24d20de3a3d7b0f.ctex"
+uid="uid://tlxn10oeehjk"
+path="res://.godot/imported/Background_PH.png-7a91bdf9d4cd1a0fc97b994e96780730.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholders/B Cell_PH.png"
-dest_files=["res://.godot/imported/B Cell_PH.png-0c37019d3e4e2475a24d20de3a3d7b0f.ctex"]
+source_file="res://Background_PH.png"
+dest_files=["res://.godot/imported/Background_PH.png-7a91bdf9d4cd1a0fc97b994e96780730.ctex"]
 
 [params]
 

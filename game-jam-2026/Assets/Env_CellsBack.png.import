@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cusmrx77753jv"
-path="res://.godot/imported/B Cell_PH.png-0c37019d3e4e2475a24d20de3a3d7b0f.ctex"
+uid="uid://ciit4sigs22o3"
+path="res://.godot/imported/Env_CellsBack.png-abb9ba27aaea60f1b39825c96e3070a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholders/B Cell_PH.png"
-dest_files=["res://.godot/imported/B Cell_PH.png-0c37019d3e4e2475a24d20de3a3d7b0f.ctex"]
+source_file="res://Assets/Env_CellsBack.png"
+dest_files=["res://.godot/imported/Env_CellsBack.png-abb9ba27aaea60f1b39825c96e3070a3.ctex"]
 
 [params]
 

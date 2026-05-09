@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cbn60qwihjsv0"]
+
+[ext_resource type="Texture2D" uid="uid://xnuhk4t8je0q" path="res://Assets/Env_Barrier.png" id="1_xxgf6"]
+
+[node name="wall" type="Node2D" unique_id=1614237838]
+texture_filter = 1
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=953243124]
+z_index = -1
+repeat_size = Vector2(1600, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1844755174]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_xxgf6")
+centered = false
