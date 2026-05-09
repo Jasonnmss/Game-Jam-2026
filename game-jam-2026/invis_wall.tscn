@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djygw7qcv3ffr"]
+
+[ext_resource type="Script" uid="uid://du55wpnln3m7x" path="res://invis_wall.gd" id="1_i6oxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2k2x"]
+size = Vector2(63, 614)
+
+[node name="invis_wall" type="Area2D" unique_id=1093050372]
+script = ExtResource("1_i6oxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857223048]
+position = Vector2(21.5, 297)
+shape = SubResource("RectangleShape2D_a2k2x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

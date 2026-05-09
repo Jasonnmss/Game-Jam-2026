@@ -34,6 +34,8 @@ radius = 30.0
 [node name="Node2D" type="Node2D" unique_id=253946175]
 
 [node name="Bullet enemy" type="Area2D" parent="." unique_id=1063991251 groups=["bullet"]]
+collision_layer = 2
+collision_mask = 2
 script = SubResource("GDScript_1xapl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bullet enemy" unique_id=1178844523]
