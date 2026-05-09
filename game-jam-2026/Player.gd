@@ -52,4 +52,9 @@ func die():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	await $Sprite.animation_finished
 	#animation and go to menu reset
-	queue_free()
+	#queue_free()
+	await get_tree().create_timer(1).timeout
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://open.tscn")
+	
+ 

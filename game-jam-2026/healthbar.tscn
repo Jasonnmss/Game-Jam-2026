@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c07msqvi8753k"]
 
-[ext_resource type="Texture2D" uid="uid://upuf7i0y62tn" path="res://Assets/Placeholders/Virus_PH.png" id="1_iywrq"]
+[ext_resource type="Texture2D" uid="uid://bxjxmpax5bxe6" path="res://Assets/Virus_Base.png" id="1_iywrq"]
 
 [node name="healthbar" type="HBoxContainer" unique_id=306982856]
 

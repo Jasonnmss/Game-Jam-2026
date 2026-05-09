@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c6lbfc0vcy0uv"]
 
+[ext_resource type="Script" uid="uid://d3i1xpsnst8oh" path="res://main.gd" id="1_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cpiecoyeunhsa" path="res://backround_final.tscn" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dw0w8luytjaka" path="res://dna.tscn" id="2_kek77"]
 [ext_resource type="PackedScene" uid="uid://8fwm4adxppyu" path="res://world.tscn" id="3_4c57u"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://djygw7qcv3ffr" path="res://invis_wall.tscn" id="9_kek77"]
 
 [node name="main" type="Node" unique_id=944928744]
+script = ExtResource("1_4c57u")
 
 [node name="ui" type="Node2D" parent="." unique_id=494185286]
 z_index = -1
