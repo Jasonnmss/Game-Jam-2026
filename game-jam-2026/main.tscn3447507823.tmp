@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8fwm4adxppyu" path="res://world.tscn" id="3_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bxkw4yuxmisx8" path="res://wall.tscn" id="4_efxa6"]
 [ext_resource type="PackedScene" uid="uid://bjrdalekpx3gh" path="res://player.tscn" id="5_dg77c"]
+[ext_resource type="PackedScene" uid="uid://c7uooy082r8k7" path="res://enemy_1.tscn" id="6_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cbn60qwihjsv0" path="res://wall_ui.tscn" id="7_w48qg"]
 [ext_resource type="PackedScene" uid="uid://c07msqvi8753k" path="res://healthbar.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://djygw7qcv3ffr" path="res://invis_wall.tscn" id="9_kek77"]
@@ -25,6 +26,10 @@ z_index = -1
 
 [node name="Player" parent="." unique_id=1716914451 instance=ExtResource("5_dg77c")]
 scale = Vector2(2, 2)
+
+[node name="Enemy_basic" parent="." unique_id=2117483177 instance=ExtResource("6_ycdy4")]
+z_index = 1
+position = Vector2(964, 283)
 
 [node name="wall_ui" parent="." unique_id=1614237838 instance=ExtResource("7_w48qg")]
 z_index = 3

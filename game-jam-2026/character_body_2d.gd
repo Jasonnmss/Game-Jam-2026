@@ -49,4 +49,6 @@ func damage():
 		die()
 		
 func die():
+	var play = $Sprite2D
+	play.play("death")
 	queue_free()
