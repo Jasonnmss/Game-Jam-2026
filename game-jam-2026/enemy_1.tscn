@@ -102,8 +102,8 @@ animations = [{
 [node name="Enemies" type="Node2D" unique_id=2117483177]
 
 [node name="Basic B" type="CharacterBody2D" parent="." unique_id=467065630]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 40
 script = ExtResource("2_pjquw")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Basic B" unique_id=396866507]
