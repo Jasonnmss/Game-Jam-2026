@@ -30,3 +30,11 @@ position = Vector2(964, 283)
 
 [node name="wall_ui" parent="." unique_id=1614237838 instance=ExtResource("7_w48qg")]
 z_index = 3
+
+[node name="Enemy_basic2" parent="." unique_id=1561545851 instance=ExtResource("6_ycdy4")]
+z_index = 1
+position = Vector2(1594, 457)
+
+[node name="Enemy_basic3" parent="." unique_id=980935106 instance=ExtResource("6_ycdy4")]
+z_index = 1
+position = Vector2(1286, 100)

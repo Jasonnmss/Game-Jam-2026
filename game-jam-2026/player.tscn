@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bjrdalekpx3gh"]
 
 [ext_resource type="Script" uid="uid://mgft2xi2ub6f" path="res://Player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://bcsiurnnuepan" path="res://Assets/Placeholders/Virus_PH.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://upuf7i0y62tn" path="res://Assets/Placeholders/Virus_PH.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://cbl3gu6g0fyqs" path="res://damage_red.gd" id="3_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(49, 21)
@@ -17,3 +18,17 @@ shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1670690377]
 texture = ExtResource("2_onrkg")
+
+[node name="Damage" type="CanvasLayer" parent="CharacterBody2D" unique_id=1301563286]
+layer = 10
+script = ExtResource("3_i3pqv")
+
+[node name="ColorRect" type="ColorRect" parent="CharacterBody2D/Damage" unique_id=136198540]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
