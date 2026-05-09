@@ -29,13 +29,13 @@ radius = 30.0
 
 [node name="Node2D" type="Node2D" unique_id=253946175]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1063991251]
+[node name="Bullet enemy" type="Area2D" parent="." unique_id=1063991251]
 script = SubResource("GDScript_1xapl")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1178844523]
+[node name="Sprite2D" type="Sprite2D" parent="Bullet enemy" unique_id=1178844523]
 rotation = -3.1415925
 texture = ExtResource("1_1xapl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2080800950]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet enemy" unique_id=2080800950]
 position = Vector2(4, 0)
 shape = SubResource("CircleShape2D_1xapl")
