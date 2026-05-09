@@ -1,18 +1,23 @@
 [gd_scene format=3 uid="uid://dw0w8luytjaka"]
 
 [ext_resource type="Script" uid="uid://bcvdfnh3umyxv" path="res://dna.gd" id="1_k673e"]
-[ext_resource type="Texture2D" uid="uid://b1nxowkjv8lnv" path="res://Assets/Placeholders/DNA_PH.png" id="2_k673e"]
+[ext_resource type="Texture2D" uid="uid://bp2txdn3e0rb8" path="res://Assets/DNA_Projectile.png" id="2_k673e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_armfn"]
-size = Vector2(59, 32)
+size = Vector2(23, 33)
 
 [node name="DNA" type="Node2D" unique_id=1618206276]
 
 [node name="shot" type="Area2D" parent="." unique_id=1962483693 groups=["bullet"]]
 script = ExtResource("1_k673e")
 
+[node name="shot" type="CharacterBody2D" parent="." unique_id=1370364202]
+
+[node name="Sprite2D" type="Sprite2D" parent="shot" unique_id=1536194696]
+texture = ExtResource("2_k673e")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shot" unique_id=1589929934]
-position = Vector2(0.5, -1)
+position = Vector2(16.5, -0.5)
 shape = SubResource("RectangleShape2D_armfn")
 
 [node name="Sprite2D" type="Sprite2D" parent="shot" unique_id=1536194696]
