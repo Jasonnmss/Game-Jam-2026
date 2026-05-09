@@ -6,6 +6,8 @@
 size = Vector2(63, 614)
 
 [node name="invis_wall" type="Area2D" unique_id=1093050372]
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_i6oxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857223048]
