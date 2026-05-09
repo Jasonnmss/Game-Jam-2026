@@ -28,4 +28,4 @@ z_index = 3
 [node name="world" parent="." unique_id=1821206742 instance=ExtResource("3_4c57u")]
 
 [node name="EnemyHandling" parent="." unique_id=1944915439 instance=ExtResource("7_272bh")]
-position = Vector2(137, -164)
+position = Vector2(972, 144)

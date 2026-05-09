@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b8k58o03n6y4i"]
+
+[ext_resource type="Script" uid="uid://chsr7bt5n6di5" path="res://enemyTCell.gd" id="1_hm4ua"]
+[ext_resource type="Texture2D" uid="uid://cusmrx77753jv" path="res://Assets/Placeholders/B Cell_PH.png" id="2_pk8y5"]
+
+[node name="T-Cell" type="CharacterBody2D" unique_id=467065630]
+script = ExtResource("1_hm4ua")
+speed = 60
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=189012780]
+rotation = 1.5707964
+texture = ExtResource("2_pk8y5")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=985616864]
+build_mode = 1
+polygon = PackedVector2Array(48, -34, 53, -1, 49, 24, 38, 45, 16, 57, -17, 61, -39, 57, -51, 48, -51, 37, -39, 2, -48, -29, -43, -44, -17, -58, 6, -60, 24, -59, 37, -51)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=920877497]
+position = Vector2(-78.261444, 0.83781433)
+
+[node name="Timer" type="Timer" parent="." unique_id=185729452]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

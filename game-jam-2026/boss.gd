@@ -1,12 +1,14 @@
 extends CharacterBody2D
+class_name EnemyBCell
 
 var Bullet = preload("res://enemy_bullet.tscn")
 var canshoot = true
+signal died
 #var player = null
 
 @export var health = 3
 
-@export var speed = 50
+@export var speed = 20
 @export var accelerate = 50
 
 @onready var spawnpos = $Marker2D
@@ -16,7 +18,7 @@ var canshoot = true
 		#player = body
 		
 func _ready() -> void: 
-	shoot()
+	pass
 	
 func _physics_process(delta: float) -> void:
 	speed += delta * accelerate
@@ -49,4 +51,6 @@ func damage():
 		die()
 		
 func die():
+	died.emit()
+	print("signal")
 	queue_free()
