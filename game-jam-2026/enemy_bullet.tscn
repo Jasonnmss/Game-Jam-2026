@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lyhev5538a75"]
 
-[ext_resource type="Texture2D" uid="uid://sd2jerk30h7f" path="res://Assets/Placeholders/Antibody_PH.png" id="1_1xapl"]
+[ext_resource type="Texture2D" uid="uid://d01uebr6imotr" path="res://Assets/AB_Projectile.png" id="1_1xapl"]
 
 [sub_resource type="GDScript" id="GDScript_1xapl"]
 script/source = "extends Area2D
@@ -9,7 +9,6 @@ var speed = 400
 
 @export var life_time = 2
 @export var life_spawn  = 0
-
 
 func _physics_process(delta: float) -> void:
 	position.x -= delta * speed

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bcvdfnh3umyxv" path="res://dna.gd" id="1_k673e"]
 [ext_resource type="Texture2D" uid="uid://b1nxowkjv8lnv" path="res://Assets/Placeholders/DNA_PH.png" id="2_k673e"]
+[ext_resource type="PackedScene" uid="uid://barb64hjeygnh" path="res://Hit.tscn" id="2_syva3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_armfn"]
 size = Vector2(59, 32)
@@ -10,6 +11,7 @@ size = Vector2(59, 32)
 
 [node name="shot" type="Area2D" parent="." unique_id=1962483693 groups=["bullet"]]
 script = ExtResource("1_k673e")
+particle = ExtResource("2_syva3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shot" unique_id=1589929934]
 position = Vector2(0.5, -1)
@@ -17,6 +19,9 @@ shape = SubResource("RectangleShape2D_armfn")
 
 [node name="Sprite2D" type="Sprite2D" parent="shot" unique_id=1536194696]
 texture = ExtResource("2_k673e")
+
+[node name="Marker2D" type="Marker2D" parent="shot" unique_id=1202733070]
+position = Vector2(29, 0)
 
 [connection signal="area_entered" from="shot" to="shot" method="_on_area_entered"]
 [connection signal="body_entered" from="shot" to="shot" method="_on_body_entered"]

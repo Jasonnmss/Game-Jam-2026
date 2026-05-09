@@ -29,9 +29,11 @@ func damage_player():
 		die()
 		
 func die():
-	$AnimationPlayer.play("death")
+	get_tree().paused = true
+	await get_tree().create_timer(2).timeout
+	$Sprite.play("death")
 	get_tree().paused = true
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	await $AnimationPlayer.animation_finished
+	await $Sprite.animation_finished
 	#animation and go to menu reset
 	queue_free()
