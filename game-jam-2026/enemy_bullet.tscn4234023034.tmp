@@ -22,10 +22,12 @@ func _on_body_entered(body):
 	if body.has_method(\"damage_player\"):                
 		body.damage_player()
 		queue_free()
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group(\"bullet\"): 
-			queue_free()
+		
+func damage():
+		die()
+		
+func die():
+	queue_free()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1xapl"]
@@ -33,7 +35,7 @@ radius = 30.0
 
 [node name="Node2D" type="Node2D" unique_id=253946175]
 
-[node name="Bullet enemy" type="Area2D" parent="." unique_id=1063991251 groups=["bullet"]]
+[node name="Bullet enemy" type="Area2D" parent="." unique_id=1063991251]
 script = SubResource("GDScript_1xapl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bullet enemy" unique_id=1178844523]
@@ -44,5 +46,4 @@ texture = ExtResource("1_1xapl")
 position = Vector2(4, 0)
 shape = SubResource("CircleShape2D_1xapl")
 
-[connection signal="area_entered" from="Bullet enemy" to="Bullet enemy" method="_on_area_entered"]
 [connection signal="body_entered" from="Bullet enemy" to="Bullet enemy" method="_on_body_entered"]

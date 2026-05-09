@@ -25,6 +25,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Game Jam 2026"
 
+[global_group]
+
+bullet=""
+
 [input]
 
 ui_accept={

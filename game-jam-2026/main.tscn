@@ -22,9 +22,11 @@ z_index = -1
 [node name="wall" parent="." unique_id=1695307919 instance=ExtResource("4_efxa6")]
 
 [node name="Player" parent="." unique_id=1716914451 instance=ExtResource("5_dg77c")]
+scale = Vector2(2, 2)
 
-[node name="Enemies" parent="." unique_id=2117483177 instance=ExtResource("6_ycdy4")]
+[node name="Enemy_basic" parent="." unique_id=2117483177 instance=ExtResource("6_ycdy4")]
 z_index = 1
+position = Vector2(964, 283)
 
 [node name="wall_ui" parent="." unique_id=1614237838 instance=ExtResource("7_w48qg")]
 z_index = 3

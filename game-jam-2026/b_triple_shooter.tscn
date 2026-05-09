@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dc4q1lnxpj17g"]
+
+[ext_resource type="Script" uid="uid://dykhv3erb3rut" path="res://b_triple_shooter.gd" id="1_v7dxj"]
+[ext_resource type="Texture2D" uid="uid://cusmrx77753jv" path="res://Assets/Placeholders/B Cell_PH.png" id="2_ewc55"]
+
+[node name="B Triple Shooter" type="CharacterBody2D" unique_id=581381596]
+script = ExtResource("1_v7dxj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1126592391]
+texture = ExtResource("2_ewc55")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=2045860737]
+build_mode = 1
+polygon = PackedVector2Array(48, -34, 53, -1, 49, 24, 38, 45, 16, 57, -17, 61, -39, 57, -51, 48, -51, 37, -39, 2, -48, -29, -43, -44, -17, -58, 6, -60, 24, -59, 37, -51)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1456779482]
+position = Vector2(-78.261444, 0.83781433)
+
+[node name="Timer" type="Timer" parent="." unique_id=1737599397]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
